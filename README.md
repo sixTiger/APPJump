@@ -1,7 +1,5 @@
-# XXBLibs
-#一些好用的工具类
-常用的分类，工具类
-##支持pod
-```c
-pod 'XXBLibs', :git => "https://github.com/sixTiger/XXBLibs"
-```
+# APPJump
+#一个简单的示例程序
+简单的演示了应用间跳转
+应用的乎起
+应用间的信息的传递

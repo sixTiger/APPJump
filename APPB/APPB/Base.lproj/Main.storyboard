@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是APPB点我唤醒APPA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfz-ve-NQn">
+                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.078882820048014057" blue="0.44624476023348891" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WP-rB-QiA">
+                                <rect key="frame" x="40" y="84" width="100" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Skb-Ad-cs7"/>
+                                </constraints>
+                                <state key="normal" title="打开A"/>
+                                <connections>
+                                    <action selector="openA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kKD-8f-V2x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nj-oP-Nwa">
+                                <rect key="frame" x="460" y="84" width="100" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="4Pw-4i-HmR"/>
+                                </constraints>
+                                <state key="normal" title="打开c"/>
+                                <connections>
+                                    <action selector="openC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7O7-ds-2b8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nfz-ve-NQn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8X8-2f-WoC"/>
+                            <constraint firstItem="0WP-rB-QiA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="64" id="8ed-VB-sp8"/>
+                            <constraint firstItem="2Nj-oP-Nwa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="64" id="E5q-L8-3Pw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Nj-oP-Nwa" secondAttribute="trailing" constant="20" id="J9u-YA-Rvk"/>
+                            <constraint firstItem="0WP-rB-QiA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="L6P-jM-KXg"/>
+                            <constraint firstItem="nfz-ve-NQn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Q2E-9i-Ztl"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nfz-ve-NQn" secondAttribute="bottom" id="gSP-Ak-2Ya"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nfz-ve-NQn" secondAttribute="trailing" id="gxG-8v-sIM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

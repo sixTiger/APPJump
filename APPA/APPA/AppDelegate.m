@@ -17,6 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self handlePushWithApplication:application options:launchOptions];
     return YES;
 }
 
@@ -51,4 +52,36 @@
     NSLog(@"---->>>\n%s \n%@  ",__func__,url);
     return YES;
 }
+
+- (void)handlePushWithApplication:(UIApplication *)application options:(NSDictionary *)launchOptions{
+    // 新增通知注册
+    if ([UIDevice currentDevice].systemVersion.floatValue >= 8.0)
+    {
+        [application registerForRemoteNotifications];
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes: (UIUserNotificationTypeBadge | UIUserNotificationTypeAlert | UIUserNotificationTypeSound) categories:nil];
+        [application registerUserNotificationSettings:settings];
+    }
+    else
+    {
+        /**
+         *
+         UIRemoteNotificationTypeBadge   = 1 << 0,
+         UIRemoteNotificationTypeSound   = 1 << 1,
+         UIRemoteNotificationTypeAlert   = 1 << 2,
+         */
+        [application registerForRemoteNotificationTypes:
+         UIRemoteNotificationTypeBadge |
+         UIRemoteNotificationTypeAlert |
+         UIRemoteNotificationTypeSound];
+    }
+    
+    /**
+     *  处理程序呗杀死的情况下的推送
+     */
+    if (launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey])
+    {
+    }
+    [application setApplicationIconBadgeNumber:0];
+}
+
 @end

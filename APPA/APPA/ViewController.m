@@ -46,7 +46,7 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex != 0) {
-        NSString * UIApplicationOpenSettingsURLString = @"prefs:root=NOTIFICATIONS_ID=APPA";
+        NSString * UIApplicationOpenSettingsURLString = @"prefs:root=com.xiaoxiaobing.APPA";
         NSURL * url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
         
         if([[UIApplication sharedApplication] canOpenURL:url]) {

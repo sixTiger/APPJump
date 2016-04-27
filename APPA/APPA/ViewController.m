@@ -44,6 +44,16 @@
     }
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSURL *url = [NSURL URLWithString:@"https://www.baidu.com"];
+//    [[NSUserDefaults standardUserDefaults] setObject:url forKey:@"URL"];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
+    NSMutableArray *array = [NSMutableArray array];
+    [array addObject:url];
+    url = nil;
+    [array addObject:url];
+}
+
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex != 0) {
         NSString * UIApplicationOpenSettingsURLString = @"prefs:root=com.xiaoxiaobing.APPA";
@@ -55,6 +65,8 @@
     }
 }
 -  (BOOL)isAllowedNotification {
+    
+
     //iOS8 check if user allow notification
     if ([UIDevice currentDevice].systemVersion.floatValue >= 8.0) {// system is iOS8
         UIUserNotificationSettings *setting = [[UIApplication sharedApplication] currentUserNotificationSettings];
